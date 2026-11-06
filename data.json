@@ -94,7 +94,8 @@
    "status": "Not contacted",
    "event": "VIP night 19 Nov",
    "contact": "",
-   "notes": ""
+   "notes": "",
+   "requested": "2026-11-06"
   },
   {
    "id": "kev_truong",
@@ -2066,6 +2067,23 @@
    "contact": "",
    "notes": "",
    "requested": "2026-10-28"
+  },
+  {
+   "id": "ladyrasha_",
+   "handle": "ladyrasha_",
+   "name": "RASHA",
+   "followers": 5130,
+   "where": "",
+   "why": "Added by Yabi.",
+   "segment": "Fragrance · Australia",
+   "following": true,
+   "followsUs": false,
+   "done": false,
+   "status": "Not contacted",
+   "event": "VIP night 19 Nov",
+   "contact": "",
+   "notes": "",
+   "requested": "2026-11-06"
   }
  ],
  "segOrder": [
@@ -2081,5 +2099,12 @@
  "savedAt": null,
  "removed": [],
  "repaired27": true,
- "poolPurged": true
+ "poolPurged": true,
+ "requestedApplied": [
+  "calvinswart_",
+  "fragrance_papi",
+  "jarrad.marc",
+  "ladyrasha_",
+  "ursulla_thescentchick"
+ ]
 }
