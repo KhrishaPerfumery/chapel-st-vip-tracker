@@ -1992,7 +1992,7 @@
    "id": "themannyshah",
    "handle": "themannyshah",
    "name": "Manny Shah",
-   "followers": 35798,
+   "followers": 37000,
    "where": "Melbourne",
    "why": "Manny Shah, co-founder Rank My Business. Our agency.",
    "segment": "Press & partners",
@@ -2002,7 +2002,8 @@
    "status": "Not contacted",
    "event": "VIP night 19 Nov",
    "contact": "",
-   "notes": ""
+   "notes": "",
+   "requested": "2026-11-10"
   },
   {
    "id": "the_bespokeboys",
@@ -2273,6 +2274,23 @@
    "contact": "",
    "notes": "",
    "requested": "2026-11-10"
+  },
+  {
+   "id": "kunalshah.digital",
+   "handle": "kunalshah.digital",
+   "name": "Kuunal Shah",
+   "followers": 3968,
+   "where": "",
+   "why": "Follows us.",
+   "segment": "Press & partners",
+   "following": false,
+   "followsUs": true,
+   "done": false,
+   "status": "Not contacted",
+   "event": "VIP night 19 Nov",
+   "contact": "",
+   "notes": "",
+   "requested": "2026-11-10"
   }
  ],
  "segOrder": [
@@ -2300,12 +2318,14 @@
   "jackcharles",
   "jarrad.marc",
   "kavyagor_",
+  "kunalshah.digital",
   "kylehunt_",
   "ladyrasha_",
   "miss_sarahlucas",
   "nfc.perfumes",
   "sharonjohal",
   "she.smells.everything",
+  "themannyshah",
   "tloriyan",
   "ursulla_thescentchick"
  ]
