@@ -2238,5 +2238,39 @@
   "contact": "",
   "notes": "",
   "requested": "2026-11-10"
+ },
+ {
+  "id": "tloriyan",
+  "handle": "tloriyan",
+  "name": "Riyan",
+  "followers": 22000,
+  "where": "Melbourne",
+  "why": "Melbourne / Atlanta creator; follows us.",
+  "segment": "Lifestyle · Melbourne",
+  "following": false,
+  "followsUs": true,
+  "done": false,
+  "status": "Not contacted",
+  "event": "VIP night 19 Nov",
+  "contact": "",
+  "notes": "",
+  "requested": "2026-11-10"
+ },
+ {
+  "id": "kavyagor_",
+  "handle": "kavyagor_",
+  "name": "Kavya Gor",
+  "followers": 68000,
+  "where": "",
+  "why": "Model.",
+  "segment": "Named",
+  "following": false,
+  "followsUs": false,
+  "done": false,
+  "status": "Not contacted",
+  "event": "VIP night 19 Nov",
+  "contact": "",
+  "notes": "",
+  "requested": "2026-11-10"
  }
 ]
