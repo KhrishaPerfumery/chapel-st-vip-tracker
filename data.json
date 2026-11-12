@@ -1,6 +1,23 @@
 {
  "rows": [
   {
+   "id": "jennkarly",
+   "handle": "jennkarly",
+   "name": "Jen Karly",
+   "followers": 1325,
+   "where": "Melbourne",
+   "why": "Fragrance lover; tagged by Jess (busy teacher). Spotted the store at Fragranzi; keen on Casamorati Dama Bianca.",
+   "segment": "Fragrance · Melbourne",
+   "following": false,
+   "followsUs": false,
+   "done": false,
+   "status": "Confirmed",
+   "event": "VIP night 19 Nov",
+   "contact": "",
+   "notes": "RSVP 11 Nov via IG DM: coming. 6am flight next morning, may leave early.",
+   "requested": "2026-11-12"
+  },
+  {
    "id": "gentlemenschoice",
    "handle": "gentlemenschoice",
    "name": "Gentlemen's Choice",
@@ -14,7 +31,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "gentlemenschoiceaus@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "requested": "2026-11-10",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -63,10 +80,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Declined",
    "event": "VIP night 19 Nov",
    "contact": "jvp@jvpmelbourne.com",
-   "notes": "",
+   "notes": "Email 11 Nov: other commitments.",
    "requested": "2026-11-11",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -224,7 +241,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "kavyagor23@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "requested": "2026-11-10",
    "dmSent": "2026-11-10T08:46:47.848Z"
   },
@@ -278,7 +295,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "sharon@sfmanagement.com.au",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "requested": "2026-11-10",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -311,10 +328,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Declined",
    "event": "VIP night 19 Nov",
    "contact": "michelle.tozer@imgtalent.com",
-   "notes": "",
+   "notes": "IMG (Michelle) 11 Nov: not available.",
    "requested": "2026-11-10",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -368,7 +385,7 @@
    "status": "Confirmed",
    "event": "VIP night 19 Nov",
    "contact": "megan@chicdigitalcreative.com.au",
-   "notes": "RSVP 11 Nov: will definitely swing by and support. Plus one asked.",
+   "notes": "RSVP 11 Nov: will definitely swing by and support. Plus one asked. · Chic (Niamh) 11 Nov: will pop by, has another commitment so can't stay the full event.",
    "requested": "2026-11-10",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -542,7 +559,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "excite.my.nose@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -661,7 +678,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "cmbfragrancereviews@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:46:47.848Z"
   },
   {
@@ -746,7 +763,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "ugcmaryaam@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:46:47.848Z"
   },
   {
@@ -797,7 +814,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "charissehain@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -848,7 +865,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "danish@maxconnectors.com.au",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -865,7 +882,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "eythan.yeoh@hotmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -882,7 +899,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "hello@gemkwatts.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -934,7 +951,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "dgalea24@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -985,7 +1002,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "rileybeven@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:46:47.848Z"
   },
   {
@@ -1036,7 +1053,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "georgiamay.k@outlook.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1087,7 +1104,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "mazielajorneo@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1172,7 +1189,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "shan@hutton-house.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1189,7 +1206,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "jonsgbla@gmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1220,10 +1237,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Replied",
    "event": "VIP night 19 Nov",
    "contact": "geodale@thisisamplifytalent.com",
-   "notes": "",
+   "notes": "Amplify (Julia) 10 Nov: shared with Geo, will report back.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1237,10 +1254,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Declined",
    "event": "VIP night 19 Nov",
    "contact": "maya@mgptalent.com",
-   "notes": "",
+   "notes": "MGP 12 Nov: pre-existing commitments.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1254,10 +1271,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Replied",
    "event": "VIP night 19 Nov",
    "contact": "catherine@vivemanagement.com.au",
-   "notes": "",
+   "notes": "Vive (Samuel) 11 Nov: asks if paid budget for attendance + content; prioritising paid. Awaiting Yabi.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1274,7 +1291,7 @@
    "status": "Contacted",
    "event": "VIP night 19 Nov",
    "contact": "marinamakeup.artistry@hotmail.com",
-   "notes": "",
+   "notes": "Email follow-up + invite image sent 12 Nov.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1339,10 +1356,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Declined",
    "event": "VIP night 19 Nov",
    "contact": "havana@cloutcommunications.com.au",
-   "notes": "",
+   "notes": "Clout (Maria) 11 Nov: overseas. Yabi replied.",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
   {
@@ -1424,10 +1441,10 @@
    "following": true,
    "followsUs": false,
    "done": false,
-   "status": "Contacted",
+   "status": "Confirmed",
    "event": "VIP night 19 Nov",
    "contact": "jarradmarc@gmail.com",
-   "notes": "",
+   "notes": "Email 10 Nov: thrilled to attend.",
    "requested": "2026-10-28",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -1442,10 +1459,10 @@
    "following": true,
    "followsUs": true,
    "done": false,
-   "status": "Contacted",
+   "status": "Confirmed",
    "event": "VIP night 19 Nov",
    "contact": "nectro_v@yahoo.com",
-   "notes": "",
+   "notes": "Email 10 Nov: will def come through.",
    "requested": "2026-10-28",
    "dmSent": "2026-11-10T08:28:31.117Z"
   },
@@ -1478,7 +1495,7 @@
   "Press & partners"
  ],
  "collapsed": {},
- "savedAt": "2026-11-11T00:00:00Z",
+ "savedAt": "2026-11-12T02:30:00Z",
  "removed": [
   "_jessicaugc_",
   "alexandrahainess",
