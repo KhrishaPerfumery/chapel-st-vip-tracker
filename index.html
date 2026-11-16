@@ -378,7 +378,7 @@ function rowHTML(r){
     <td class="num"><span class="ed" contenteditable="true" data-f="followers" inputmode="numeric" title="${r.followers??''}">${fmt(r.followers)}</span></td>
     <td class="where"><span class="ed" contenteditable="true" data-f="where">${esc(r.where||'')}</span></td>
     <td class="why"><span class="ed" contenteditable="true" data-f="why" data-ph="why invite">${esc(r.why||'')}</span></td>
-    <td class="status"><select class="pill ${sclass(r.status)}" data-f="status">${stOpts}</select><span class="party" title="Total people incl. them">party <span class="ed" contenteditable="true" data-f="party" inputmode="numeric" data-ph="1">${r.party??''}</span></span></td>
+    <td class="status"><select class="pill ${sclass(r.status)}" data-f="status">${stOpts}</select>${['Confirmed','Yes','Maybe'].includes(r.status)?`<span class="party" title="Total people incl. them">party <span class="ed" contenteditable="true" data-f="party" inputmode="numeric" data-ph="1">${r.party??''}</span></span>`:''}</td>
     <td class="event"><select class="ev ${evclass(r.event)}" data-f="event">${evOpts}</select></td>
     <td class="contact"><select class="ev" data-f="contact">${ctOpts}</select></td>
     <td class="notes"><span class="ed" contenteditable="true" data-f="notes" data-ph="notes, replies, dates">${esc(r.notes||'')}</span></td>
