@@ -10,7 +10,7 @@
 :root{
   --bg:#f4f8fd; --panel:#ffffff; --ink:#0f1b2d; --mute:#5c6f8a; --line:#d6e2f2; --soft:#eaf1fb; --band:#e3eefc;
   --accent:#2563eb; --accent-ink:#ffffff;
-  --s-none:#cfdbea; --s-contacted:#0ea5e9; --s-replied:#8b5cf6; --s-yes:#f59e0b; --s-confirmed:#16a34a; --s-declined:#ef4444; --s-silent:#94a3b8;
+  --s-none:#cfdbea; --s-contacted:#0ea5e9; --s-replied:#8b5cf6; --s-yes:#f59e0b; --s-maybe:#eab308; --s-confirmed:#16a34a; --s-declined:#ef4444; --s-silent:#94a3b8;
   --seg1:#2563eb; --seg2:#0ea5e9; --seg3:#0d9488; --seg4:#6366f1; --seg5:#ec4899; --seg6:#f59e0b; --seg7:#8b5cf6; --seg8:#64748b;
   --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -102,6 +102,8 @@ select.pill.none{color:var(--ink);background-image:url("data:image/svg+xml;utf8,
 select.pill.contacted{background-color:var(--s-contacted)}
 select.pill.replied{background-color:var(--s-replied)}
 select.pill.yes{background-color:var(--s-yes)}
+select.pill.maybe{background-color:var(--s-maybe)}
+.party{display:block;margin-top:4px;font-size:11px;color:var(--muted,#716a62);white-space:nowrap}.party .ed{display:inline-block;min-width:1.4em;font-weight:600;color:inherit}
 select.pill.confirmed{background-color:var(--s-confirmed)}
 select.pill.declined{background-color:var(--s-declined)}
 select.pill.silent{background-color:var(--s-silent)}
@@ -234,7 +236,7 @@ td.msg{white-space:nowrap}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
 <script>
 const STATUSES=[
- {k:"Not contacted",c:"none"},{k:"Contacted",c:"contacted"},{k:"Replied",c:"replied"},{k:"Yes",c:"yes"},{k:"Confirmed",c:"confirmed"},{k:"Declined",c:"declined"},{k:"No reply",c:"silent"}];
+ {k:"Not contacted",c:"none"},{k:"Contacted",c:"contacted"},{k:"Replied",c:"replied"},{k:"Maybe",c:"maybe"},{k:"Yes",c:"yes"},{k:"Confirmed",c:"confirmed"},{k:"Declined",c:"declined"},{k:"No reply",c:"silent"}];
 const EVENTS=["VIP night 19 Nov","Opening 14 Nov","Both nights","Clearance 20–30 Nov","Gifting Dec","Other / TBC"];
 const CONTACTS=["","DM","Email","Phone","In person","Via manager"];
 const SEG_ORDER_DEFAULT=["Named","Fragrance · Melbourne","Fragrance · Australia","Fragrance · Interstate","Lifestyle · Melbourne","Lifestyle · Directories","Press & partners","Personal guests"];
@@ -321,8 +323,8 @@ function segRows(seg){
   else if(sb==='updated')rows=[...rows].sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));
   return rows;
 }
-function counts(rows){const c={};for(const s of STATUSES)c[s.c]=0;for(const r of rows)c[sclass(r.status)]++;c.done=rows.filter(r=>r.done).length;c.total=rows.length;return c;}
-function barHTML(c){const order=['confirmed','yes','replied','contacted','silent','declined'];return order.map(k=>c[k]?`<span style="width:${100*c[k]/c.total}%;background:var(--s-${k})" title="${k} ${c[k]}"></span>`:'').join('');}
+function counts(rows){const c={};for(const s of STATUSES)c[s.c]=0;for(const r of rows)c[sclass(r.status)]++;c.done=rows.filter(r=>r.done).length;c.coming=rows.filter(r=>r.status==='Confirmed'||r.status==='Yes').reduce((a,r)=>a+(r.party||1),0);c.maybePpl=rows.filter(r=>r.status==='Maybe').reduce((a,r)=>a+(r.party||1),0);c.total=rows.length;return c;}
+function barHTML(c){const order=['confirmed','yes','maybe','replied','contacted','silent','declined'];return order.map(k=>c[k]?`<span style="width:${100*c[k]/c.total}%;background:var(--s-${k})" title="${k} ${c[k]}"></span>`:'').join('');}
 
 function render(){
   // filters options once
@@ -334,6 +336,8 @@ function render(){
     <div class="tot"><b>${c.total}</b><span>on your list</span></div>
     <div class="tot"><b>${c.done}</b><span>ticked</span></div>
     <div class="tot"><b><i style="background:var(--s-contacted)"></i>${c.total-c.none}</b><span>contacted+</span></div>
+    <div class="tot"><b><i style="background:var(--s-confirmed)"></i>${c.coming}</b><span>people coming</span></div>
+    <div class="tot"><b><i style="background:var(--s-maybe)"></i>${c.maybePpl}</b><span>people maybe</span></div>
     <div class="tot"><b><i style="background:var(--s-yes)"></i>${c.yes}</b><span>yes</span></div>
     <div class="tot"><b><i style="background:var(--s-confirmed)"></i>${c.confirmed}</b><span>confirmed</span></div>
     <div class="tot"><b><i style="background:var(--s-declined)"></i>${c.declined}</b><span>declined</span></div>`;
@@ -347,7 +351,7 @@ function render(){
     sec.innerHTML=`<div class="seghead">
       <span class="chev">▾</span><h2><span class="ed segname" contenteditable="true" spellcheck="false">${esc(seg)}</span><span class="n">${sc.total}</span></h2>
       <div class="mini">${barHTML(sc)}</div>
-      <span class="stat">${sc.confirmed} confirmed · ${sc.yes} yes · ${sc.total-sc.none} contacted · ${sc.done} ticked</span>
+      <span class="stat">${sc.coming} people coming · ${sc.confirmed} confirmed · ${sc.yes} yes · ${sc.total-sc.none} contacted · ${sc.done} ticked</span>
       <span class="tools"><button class="btn up" title="Move group up">↑</button><button class="btn down" title="Move group down">↓</button></span>
     </div>
     <div class="tablewrap"><table><thead><tr>
@@ -374,7 +378,7 @@ function rowHTML(r){
     <td class="num"><span class="ed" contenteditable="true" data-f="followers" inputmode="numeric" title="${r.followers??''}">${fmt(r.followers)}</span></td>
     <td class="where"><span class="ed" contenteditable="true" data-f="where">${esc(r.where||'')}</span></td>
     <td class="why"><span class="ed" contenteditable="true" data-f="why" data-ph="why invite">${esc(r.why||'')}</span></td>
-    <td class="status"><select class="pill ${sclass(r.status)}" data-f="status">${stOpts}</select></td>
+    <td class="status"><select class="pill ${sclass(r.status)}" data-f="status">${stOpts}</select><span class="party" title="Total people incl. them">party <span class="ed" contenteditable="true" data-f="party" inputmode="numeric" data-ph="1">${r.party??''}</span></span></td>
     <td class="event"><select class="ev ${evclass(r.event)}" data-f="event">${evOpts}</select></td>
     <td class="contact"><select class="ev" data-f="contact">${ctOpts}</select></td>
     <td class="notes"><span class="ed" contenteditable="true" data-f="notes" data-ph="notes, replies, dates">${esc(r.notes||'')}</span></td>
@@ -409,6 +413,7 @@ document.getElementById('q').addEventListener('input',()=>render());
 document.addEventListener('focusout',e=>{
   const t=e.target;
   if(t.matches('.ed[data-f]')){const r=find(t.closest('tr').dataset.id);let v=t.textContent.trim();
+    if(t.dataset.f==='party'){const n=parseInt(v,10);v=isNaN(n)?null:n;}
     if(t.dataset.f==='followers'){const raw=v.toLowerCase().replace(/,/g,'');let n=parseFloat(raw);if(/k$/.test(raw))n*=1000;if(/m$/.test(raw))n*=1e6;v=isNaN(n)?null:Math.round(n);}
     if(r[t.dataset.f]!==v){r[t.dataset.f]=v;touch(r);save();render();}return;}
   if(t.matches('.segname')){const sec=t.closest('section');const old=sec.dataset.seg;const nw=t.textContent.trim()||old;if(nw!==old){for(const r of state.rows)if(r.segment===old)r.segment=nw;state.segOrder=state.segOrder.map(s=>s===old?nw:s);save();render();}}
@@ -432,7 +437,7 @@ document.addEventListener('click',e=>{
   if(t.id==='resetBtn'){modal(`<h3>Reset to seed list?</h3><p>This drops every edit, status and note saved in this browser and reloads the original ${SEED.length} names. Export JSON first if you want a copy.</p><div class="acts"><button class="btn" data-x>Cancel</button><button class="btn primary" id="doReset">Reset</button></div>`,b=>{b.querySelector('#doReset').onclick=()=>{try{localStorage.removeItem(KEY);}catch(e){}state=blank();save();render();closeModal();toast('Reset');};});return;}
   if(t.id==='exportBtn'){const json=JSON.stringify(state,null,1);modal(`<h3>Export data.json</h3><p>Download it, or copy and paste into <code>data.json</code> in the repo. Commit it next to index.html and the site loads it for everyone.</p><textarea readonly id="jsonOut">${esc(json)}</textarea><div class="acts"><button class="btn" data-x>Close</button><button class="btn" id="cpJson">Copy</button><button class="btn primary" id="dlJson">Download data.json</button></div>`,b=>{b.querySelector('#cpJson').onclick=()=>copy(json,b.querySelector('#jsonOut'));b.querySelector('#dlJson').onclick=()=>dl('data.json',json,'application/json');});return;}
   if(t.id==='importBtn'){modal(`<h3>Import data.json</h3><p>Paste the JSON exported from this page (or choose the file). It replaces what is in this browser.</p><input type="file" id="impFile" accept="application/json,.json" style="margin-bottom:8px"><textarea id="jsonIn" placeholder="{ &quot;rows&quot;: [...] }"></textarea><div class="acts"><button class="btn" data-x>Cancel</button><button class="btn primary" id="doImp">Import</button></div>`,b=>{b.querySelector('#impFile').onchange=ev=>{const f=ev.target.files[0];if(!f)return;const fr=new FileReader();fr.onload=()=>b.querySelector('#jsonIn').value=fr.result;fr.readAsText(f);};b.querySelector('#doImp').onclick=()=>{try{const d=JSON.parse(b.querySelector('#jsonIn').value);if(!d.rows)throw 0;state=d;if(!state.segOrder)state.segOrder=[...SEG_ORDER_DEFAULT];if(!state.collapsed)state.collapsed={};save();render();closeModal();toast('Imported '+d.rows.length+' people');}catch(err){toast('That is not a valid export');}};});return;}
-  if(t.id==='csvBtn'){const head=['segment','handle','name','followers','where','knows','status','event','contact','done','dm','notes','updated'];const src=state.rows;const lines=[head.join(',')].concat(src.map(r=>head.map(k=>{let v=r[k];if(k==='done')v=v?'yes':'no';v=String(v??'').replace(/"/g,'""');return /[",\n]/.test(v)?`"${v}"`:v;}).join(',')));copy(lines.join('\n'));return;}
+  if(t.id==='csvBtn'){const head=['segment','handle','name','followers','where','knows','status','party','event','contact','done','dm','notes','updated'];const src=state.rows;const lines=[head.join(',')].concat(src.map(r=>head.map(k=>{let v=r[k];if(k==='done')v=v?'yes':'no';v=String(v??'').replace(/"/g,'""');return /[",\n]/.test(v)?`"${v}"`:v;}).join(',')));copy(lines.join('\n'));return;}
   if(t.matches('th[data-k]')){const sb=document.getElementById('sortBy');sb.value=t.dataset.k==='handle'?'name':t.dataset.k;render();return;}
   if(t.matches('[data-x]')||t.classList.contains('modal')){closeModal();}
 });
